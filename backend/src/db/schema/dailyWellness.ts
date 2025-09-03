@@ -1,6 +1,6 @@
 import { pgTable, uuid, varchar, integer, text, timestamp } from "drizzle-orm/pg-core";
 import { profiles } from "./profile";
-import { exerciseTypeEnum, sleepQualityEnum } from "./constants";
+import { exerciseTypeEnum, moodEnum, sleepQualityEnum } from "./constants";
 
 export const dailyWellness = pgTable("daily_wellness", {
     id: uuid("id").defaultRandom().primaryKey(),
@@ -12,7 +12,7 @@ export const dailyWellness = pgTable("daily_wellness", {
     exerciseType: exerciseTypeEnum("exercise_type"),
     sleepQuality: sleepQualityEnum("sleep_quality").notNull(),
     sleepDuration: integer("sleep_duration").notNull(),
-    mood: varchar("mood", { length: 100 }).notNull(),
+    mood: moodEnum("mood").notNull(),
     stressLevel: integer("stress_level").notNull(),
     energy: varchar("energy", { length: 100 }).notNull(),
     waterIntake: integer("water_intake").notNull(),
@@ -26,7 +26,7 @@ export const dailyWellness = pgTable("daily_wellness", {
     heartRate: integer("heart_rate"),
     bloodSugar: integer("blood_sugar"),
     notes: text("notes"),
-    date: varchar("date", { length: 50 }).notNull(),
+    date: timestamp("date", { mode: "date" }).notNull(),
 
     // timestamps
     createdAt: timestamp("created_at").defaultNow().notNull(),

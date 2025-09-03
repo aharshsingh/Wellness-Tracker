@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { testConnection } from "./config/db";
+// import { testConnection } from "./config/db";
 import config from './config/index';
 import routes from "./routes";
 import { connectRedis } from './config/redis';
@@ -13,7 +13,7 @@ app.use(cookieParser());
 
 const startServer = async () => {
   try {
-    await testConnection();
+    // await testConnection();
     await connectRedis();
     app.use("/api", routes);
     

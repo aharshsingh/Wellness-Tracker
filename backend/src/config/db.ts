@@ -1,21 +1,75 @@
-import config from './index';
-import { drizzle } from 'drizzle-orm/node-postgres';
-import { Pool } from 'pg';
-import * as schema from '../db/schema/index';
+// import config from './index';
+// import { drizzle } from 'drizzle-orm/node-postgres';
+// import { Pool } from 'pg';
+// import * as schema from '../db/schema/index';
+
+// const pool = new Pool({
+//   connectionString: config.DATABASE_URL,
+//   ssl: {
+//     ca: `-----BEGIN CERTIFICATE-----
+// MIIEUDCCArigAwIBAgIUFS/ZhB+ruaTlYzz19xPTMM2/3gUwDQYJKoZIhvcNAQEM
+// BQAwQDE+MDwGA1UEAww1MTAyZmNhMjItN2VlYy00NjQ2LWJkZjItYTJmYjYyNWFh
+// YTg0IEdFTiAxIFByb2plY3QgQ0EwHhcNMjUwODI2MTEwMjQ3WhcNMzUwODI0MTEw
+// MjQ3WjBAMT4wPAYDVQQDDDUxMDJmY2EyMi03ZWVjLTQ2NDYtYmRmMi1hMmZiNjI1
+// YWFhODQgR0VOIDEgUHJvamVjdCBDQTCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCC
+// AYoCggGBAIeQn8xOdafyV4k50ID3WRCK4KxczlVpAxi14mMZDfHju88uQpQC1Px6
+// WY11XekdHxZjNBpQIwx3YgexmXJAASqWdwM3vcGERD7N/WBZCw9iEwS2QRvijdLl
+// 76mwgglcGjHbMpEoQWV8vCJfpkhZvQ2Q9yB96B9rsyR+fUZ5SnsRHo+a5Quz9ePR
+// g/H7o1uexLJGYRTzdsenfJ25i0zZYXc1A/WC3Vc0Yd1xaE0cScL6nTrvwv3XOa1h
+// du8S9ESDpXgM6BfhD41awZFcSyFcJyV78Ie0XBVMoYxXLitwWTHoNSZY6+yC23ae
+// 4T73rqPPqfjq7kNf6/ECtfUzDAbOSCFHGPZB+iNrinJ0uKthpStq2vAk+9kqSV9v
+// 6XWcKtA/FObSQUtFdi8mASEMdGxcDhYODTmSuNKbQmni5ZvpdvwvJIcQll82PW51
+// pDoSgbfNYAUi1gicSle17wozWZYt8N/ncXF8/GQPhRDXLBWhuc8H9zD8g451wkCY
+// zAUWv+2IdQIDAQABo0IwQDAdBgNVHQ4EFgQUGFGpDBoJXXIsA5V/SneNYmWfVK4w
+// EgYDVR0TAQH/BAgwBgEB/wIBADALBgNVHQ8EBAMCAQYwDQYJKoZIhvcNAQEMBQAD
+// ggGBAClewQ8HfdBo42yGtxOumQzhT9CJbA3QF8h1MG5EI0ZYRc8ocbn2oDMsSCQk
+// 2iRgQmTpK1lRUF9p0kKHFhaNy4GJnGTsBAUVRZFT7WaSzV9HPaDQXCl//1l9UeFp
+// etcXGV4M+oD5XIZM74R3xIVbKrp+3gqGiI3hEYZmWSPymgmrrCfyAoBlPQohgmYB
+// iNUp0WL1UG+KUIJ0jP2UExvCRMM8manrefWNucgZw3Wn7DhM+mcUvF5p981X3bal
+// 4FqJczZmFeK9B7rthz7rurT0SAS0UK6u9iGjNiAUv5fZ4AFFuA8qdFq0EAvWOejR
+// rY6DPmdZgpCWuHtxAOHR3trfkpKGC8qnH8TIXPx528ULc9J6/tsy/hxrT+0Wn/OD
+// vZWUSIpR4HugWf0RdplmTjHPE0qK7q5E0ALWQGR/jtmH8RzcNzq0cBh7b9KPWl01
+// GeJjYWZc3SWks4gK/LWcNfCRVIS24JsDJ14e+pRqkQOAEtlRPCAJ1JyiSHMbb6Hq
+// aKd/YQ==
+// -----END CERTIFICATE-----
+// `,  // use provider CA cert
+//     rejectUnauthorized: true,
+//   },
+// });
+
+// export const db = drizzle(pool, { schema });
+
+// export const testConnection = async () => {
+//   try {
+//     await pool.query('SELECT 1');
+//     console.log('✅ Database connected successfully');
+//   } catch (error) {
+//     console.error('❌ Database connection failed:', error);
+//     process.exit(1);
+//   }
+// };
+
+// export default { db, testConnection };
+
+
+import 'dotenv/config';
+import { drizzle } from "drizzle-orm/node-postgres";
+import { Pool } from "pg";
 
 const pool = new Pool({
-  connectionString: config.DATABASE_URL,
+  connectionString: process.env.DATABASE_URL!,
 });
+export const db = drizzle({ client: pool });
 
-export const db = drizzle(pool, {schema});
-export const testConnection = async () => {
-  try {
-    await pool.query('SELECT 1');
-    console.log('Database connected successfully');
-  } catch (error) {
-    console.error('Database connection failed:', error);
-    process.exit(1);
-  }
-};
+// export const testConnection = async () => {
+//   try {
+//     await pool.query('SELECT 1');
+//     console.log('✅ Database connected successfully');
+//   } catch (error) {
+//     console.error('❌ Database connection failed:', error);
+//     process.exit(1);
+//   }
+// };
 
-export default {db, testConnection};
+// export default { db, testConnection };
+
