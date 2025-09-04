@@ -6,8 +6,15 @@ export default function Testimonials() {
         <section className="py-16 md:py-32">
             <div className="mx-auto max-w-6xl space-y-8 px-6 md:space-y-16">
                 <div className="relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12">
-                    <h2 className="text-4xl font-medium lg:text-5xl">Build by makers, loved by thousand developers</h2>
-                    <p>Gemini is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</p>
+                    {/* Gradient heading */}
+                    <h2 className="text-4xl font-medium lg:text-5xl bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        Trusted by fitness enthusiasts and wellness seekers
+                    </h2>
+                    <p className="text-neutral-600 dark:text-neutral-300">
+                        Wellness Tracker is helping people build healthier habits with AI-powered
+                        insights, personalized fitness suggestions, and an easy way to monitor their
+                        progress every day.
+                    </p>
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-rows-2">
@@ -15,31 +22,41 @@ export default function Testimonials() {
                         <CardHeader>
                             <img
                                 className="h-6 w-fit dark:invert"
-                                src="https://html.tailus.io/blocks/customers/nike.svg"
-                                alt="Nike Logo"
+                                src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Example.jpg"
+                                alt="Wellness Logo"
                                 height="24"
                                 width="auto"
                             />
                         </CardHeader>
                         <CardContent>
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p className="text-xl font-medium">Tailus has transformed the way I develop web applications. Their extensive collection of UI components, blocks, and templates has significantly accelerated my workflow. The flexibility to customize every aspect allows me to create unique user experiences. Tailus is a game-changer for modern web development</p>
+                                <p className="text-xl font-medium text-gray-800 dark:text-gray-200">
+                                    Wellness Tracker completely changed how I look at my fitness.
+                                    The AI suggestions are spot on—whether it’s reminding me to rest
+                                    more, suggesting lighter workouts, or pushing me when I need it.
+                                    I’ve never felt this consistent before!
+                                </p>
 
                                 <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                                     <Avatar className="size-12">
                                         <AvatarImage
-                                            src="https://tailus.io/images/reviews/shekinah.webp"
-                                            alt="Shekinah Tshiokufila"
+                                            src="https://randomuser.me/api/portraits/women/32.jpg"
+                                            alt="Priya Sharma"
                                             height="400"
                                             width="400"
                                             loading="lazy"
                                         />
-                                        <AvatarFallback>ST</AvatarFallback>
+                                        <AvatarFallback>PS</AvatarFallback>
                                     </Avatar>
 
                                     <div>
-                                        <cite className="text-sm font-medium">Shekinah Tshiokufila</cite>
-                                        <span className="text-muted-foreground block text-sm">Software Ingineer</span>
+                                        {/* Gradient name */}
+                                        <cite className="text-sm font-medium bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                                            Priya Sharma
+                                        </cite>
+                                        <span className="text-muted-foreground block text-sm">
+                                            Fitness Enthusiast
+                                        </span>
                                     </div>
                                 </div>
                             </blockquote>
@@ -48,22 +65,31 @@ export default function Testimonials() {
                     <Card className="md:col-span-2">
                         <CardContent className="h-full pt-6">
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p className="text-xl font-medium">Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.</p>
+                                <p className="text-xl font-medium text-gray-800 dark:text-gray-200">
+                                    I’ve tried many tracking apps, but this one feels personal. The
+                                    weekly and monthly reports motivate me to keep going, and I love
+                                    how I can set my own goals and actually stick to them.
+                                </p>
 
                                 <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                                     <Avatar className="size-12">
                                         <AvatarImage
-                                            src="https://tailus.io/images/reviews/jonathan.webp"
-                                            alt="Jonathan Yombo"
+                                            src="https://randomuser.me/api/portraits/men/45.jpg"
+                                            alt="Rahul Mehta"
                                             height="400"
                                             width="400"
                                             loading="lazy"
                                         />
-                                        <AvatarFallback>JY</AvatarFallback>
+                                        <AvatarFallback>RM</AvatarFallback>
                                     </Avatar>
                                     <div>
-                                        <cite className="text-sm font-medium">Jonathan Yombo</cite>
-                                        <span className="text-muted-foreground block text-sm">Software Ingineer</span>
+                                        {/* Gradient name */}
+                                        <cite className="text-sm font-medium bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                                            Rahul Mehta
+                                        </cite>
+                                        <span className="text-muted-foreground block text-sm">
+                                            Software Engineer & Runner
+                                        </span>
                                     </div>
                                 </div>
                             </blockquote>
@@ -72,22 +98,32 @@ export default function Testimonials() {
                     <Card>
                         <CardContent className="h-full pt-6">
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p>Great work on tailfolio template. This is one of the best personal website that I have seen so far!</p>
+                                <p className="text-gray-800 dark:text-gray-200">
+                                    The sleep tracking insights are amazing. It helped me fix my
+                                    irregular schedule, and I feel more energetic during workouts
+                                    now. Highly recommended for anyone serious about overall
+                                    wellness.
+                                </p>
 
                                 <div className="grid items-center gap-3 [grid-template-columns:auto_1fr]">
                                     <Avatar className="size-12">
                                         <AvatarImage
-                                            src="https://tailus.io/images/reviews/yucel.webp"
-                                            alt="Yucel Faruksahan"
+                                            src="https://randomuser.me/api/portraits/women/68.jpg"
+                                            alt="Aisha Khan"
                                             height="400"
                                             width="400"
                                             loading="lazy"
                                         />
-                                        <AvatarFallback>YF</AvatarFallback>
+                                        <AvatarFallback>AK</AvatarFallback>
                                     </Avatar>
                                     <div>
-                                        <cite className="text-sm font-medium">Yucel Faruksahan</cite>
-                                        <span className="text-muted-foreground block text-sm">Creator, Tailkits</span>
+                                        {/* Gradient name */}
+                                        <cite className="text-sm font-medium bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                                            Aisha Khan
+                                        </cite>
+                                        <span className="text-muted-foreground block text-sm">
+                                            Yoga Instructor
+                                        </span>
                                     </div>
                                 </div>
                             </blockquote>
@@ -96,22 +132,31 @@ export default function Testimonials() {
                     <Card className="card variant-mixed">
                         <CardContent className="h-full pt-6">
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p>Great work on tailfolio template. This is one of the best personal website that I have seen so far!</p>
+                                <p className="text-gray-800 dark:text-gray-200">
+                                    I use Wellness Tracker to keep an eye on my daily activity and
+                                    mood. It feels like having a fitness coach in my pocket—always
+                                    reminding me to stay on track without being overwhelming.
+                                </p>
 
                                 <div className="grid grid-cols-[auto_1fr] gap-3">
                                     <Avatar className="size-12">
                                         <AvatarImage
-                                            src="https://tailus.io/images/reviews/rodrigo.webp"
-                                            alt="Rodrigo Aguilar"
+                                            src="https://randomuser.me/api/portraits/men/25.jpg"
+                                            alt="David Lopez"
                                             height="400"
                                             width="400"
                                             loading="lazy"
                                         />
-                                        <AvatarFallback>YF</AvatarFallback>
+                                        <AvatarFallback>DL</AvatarFallback>
                                     </Avatar>
                                     <div>
-                                        <p className="text-sm font-medium">Rodrigo Aguilar</p>
-                                        <span className="text-muted-foreground block text-sm">Creator, TailwindAwesome</span>
+                                        {/* Gradient name */}
+                                        <p className="text-sm font-medium bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                                            David Lopez
+                                        </p>
+                                        <span className="text-muted-foreground block text-sm">
+                                            Marketing Professional
+                                        </span>
                                     </div>
                                 </div>
                             </blockquote>
