@@ -15,6 +15,44 @@ export type UserProfile = {
 };
 
 export interface AuthContextType {
-  user: any | null;
+  user: UserProfile | null;
   loading: boolean;
 }
+
+export type WellnessEntry = {
+  steps: number;
+  exercise: {
+    duration: number; // in minutes
+    type: string;
+  };
+  sleep: {
+    duration: number; // in hours
+    quality: string;
+  };
+  mood: string;
+  stress: string;
+  energy: string;
+  hydration: number; // glasses of water
+  caffeine: number; // cups of coffee
+  meals: string;
+  screenTime: number; // in hours
+  meditation: number; // in minutes
+  alcohol: string;
+  weight: number; // in kg
+  bp: string; // blood pressure, e.g., "120/80"
+  heartRate: number; // bpm
+  bloodSugar: number; // mg/dL
+  notes: string;
+  date: string; // YYYY-MM-DD
+};
+
+export type WellnessDay = {
+  day: string;       // e.g., "Mon", "Tue"
+  steps: number;     // number of steps
+  sleep: number;     // hours of sleep
+  stress: number;    // stress level (e.g., 1-10)
+  energy: number;    // energy level (e.g., 1-10)
+  weight: number;    // weight in kg
+};
+
+export type NumericWellnessKeys = "steps" | "sleep" | "stress" | "energy" | "weight";

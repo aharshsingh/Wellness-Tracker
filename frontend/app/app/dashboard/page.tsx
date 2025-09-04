@@ -2,10 +2,13 @@
 
 import { CursorCard, CursorCardsContainer } from "@/components/cursor-cards"
 import { Footprints, Moon, Smile, Droplet, Monitor, Activity } from "lucide-react"
-import { useState } from "react";
 import ChartsDemo from "./chart";
+import { WellnessEntry } from "@/lib/types";
 
-export default function DailyWellnessCards({ entry }) {
+type DailyWellnessCardsProps = {
+  entry: WellnessEntry;
+};
+export default function DailyWellnessCards({ entry }: DailyWellnessCardsProps) {
     entry = {
         steps: 7500,
         exercise: { duration: 30, type: "Running" },
@@ -27,8 +30,8 @@ export default function DailyWellnessCards({ entry }) {
         date: "2025-08-25"
     }
 
-    const [mode, setMode] = useState("daily");
-    const [date, setDate] = useState(null);
+    // const [mode, setMode] = useState("daily");
+    // const [date, setDate] = useState(null);
 
     return (
         <>

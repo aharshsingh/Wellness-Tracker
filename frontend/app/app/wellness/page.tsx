@@ -65,7 +65,7 @@ export default function DailyWellnessForm() {
           Small steps every day lead to big improvements in your wellbeing.
         </p>
         <blockquote className="italic text-gray-500">
-          "Wellness is a connection of paths: knowledge and action." – Joshua Holtz
+          {"Wellness is a connection of paths: knowledge and action."} – Joshua Holtz
         </blockquote>
       </div>
 

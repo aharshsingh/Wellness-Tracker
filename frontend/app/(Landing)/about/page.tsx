@@ -2,7 +2,7 @@
 
 import AboutUsSection from "@/components/about-us-section"
 
-export default function(){
+export default function Page(){
     return (
         <AboutUsSection/>
     )

@@ -7,16 +7,16 @@ import axios, { AxiosRequestConfig, Method } from "axios";
  * @param data - Request body (optional)
  * @param extraHeaders - Additional headers (optional)
  */
-export const apiRequest = async <T = any>(
+export const apiRequest = async <T = unknown, D = unknown>(
   url: string,
   method: Method = "GET",
-  data?: any,
+  data?: D,
   extraHeaders: Record<string, string> = {}
 ): Promise<T> => {
   try {
     const accessToken = localStorage.getItem("accessToken");
 
-    const config: AxiosRequestConfig = {
+    const config: AxiosRequestConfig<D> = {
       url,
       method,
       headers: {
@@ -28,9 +28,9 @@ export const apiRequest = async <T = any>(
     };
 
     const response = await axios(config);
-    return response.data;
-  } catch (error: any) {
-    if (error.response) {
+    return response.data as T;
+  } catch (error) {
+    if (axios.isAxiosError(error) && error.response) {
       throw error.response.data;
     } else {
       throw error;

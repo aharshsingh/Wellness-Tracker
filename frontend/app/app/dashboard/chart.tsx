@@ -13,6 +13,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/line-chart"
+import { NumericWellnessKeys, WellnessDay } from "@/lib/types"
 
 // Weekly data
 const weeklyData = [
@@ -44,7 +45,7 @@ const chartConfigs = {
 }
 
 // Utility: calculate percentage change
-function getPercentageChange(data: any[], key: string) {
+function getPercentageChange(data: WellnessDay[], key: NumericWellnessKeys ) {
   if (data.length < 2) return null
   const last = data[data.length - 1][key]
   const prev = data[data.length - 2][key]

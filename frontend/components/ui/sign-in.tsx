@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Eye, EyeOff, LogIn } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
+import Image from 'next/image';
 
 const AnimatedSignIn: React.FC = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
@@ -65,7 +66,7 @@ const AnimatedSignIn: React.FC = () => {
               <div className="grid grid-cols-2 grid-rows-3 gap-4 h-full overflow-hidden">
                 {/* Top left - Person working */}
                 <div className="overflow-hidden rounded-xl">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
                     alt="Person working" 
                     className="w-full h-full object-cover"
@@ -91,7 +92,7 @@ const AnimatedSignIn: React.FC = () => {
                 
                 {/* Middle left - Person at computer */}
                 <div className="overflow-hidden rounded-xl">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
                     alt="Person at computer" 
                     className="w-full h-full object-cover"
@@ -101,7 +102,7 @@ const AnimatedSignIn: React.FC = () => {
                 
                 {/* Middle right - Office space */}
                 <div className="overflow-hidden rounded-xl">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81" 
                     alt="Office space" 
                     className="w-full h-full object-cover"
@@ -127,7 +128,7 @@ const AnimatedSignIn: React.FC = () => {
                 
                 {/* Bottom right - Library */}
                 <div className="overflow-hidden rounded-xl">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" 
                     alt="Desk setup" 
                     className="w-full h-full object-cover"
@@ -150,7 +151,7 @@ const AnimatedSignIn: React.FC = () => {
             >
               <div className="flex justify-end mb-6">
                 <p className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
-                  Don't have an account? 
+                 Don&apos;t have an account? 
                   <a 
                     href="#" 
                     className={`ml-1 font-medium ${

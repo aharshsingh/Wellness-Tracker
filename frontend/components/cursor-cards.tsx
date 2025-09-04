@@ -111,6 +111,7 @@ function useCardActivation(
     illuminationRadius,
     localMouseX,
     localMouseY,
+    elementRef,
   ])
 
   return { localMouseX, localMouseY, isCardActive }

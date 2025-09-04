@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import Image from 'next/image'
 import { useRef } from "react"
 import {
   Activity,
@@ -115,7 +116,7 @@ export default function AboutUsSection() {
           <div className="flex justify-center items-center order-first md:order-none mb-8 md:mb-0">
             <div className="relative w-full max-w-xs">
               <div className="rounded-md overflow-hidden shadow-lg">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=1200&auto=format&fit=crop"
                   alt="Wellness Tracking App Preview"
                   className="w-full h-full object-cover"
@@ -157,7 +158,7 @@ export default function AboutUsSection() {
   )
 }
 
-function ServiceItem({ icon, secondaryIcon, title, description }) {
+function ServiceItem({ icon, secondaryIcon, title, description }: {icon: React.ReactNode, secondaryIcon: React.ReactNode, title: string, description: string}) {
   return (
     <div className="flex flex-col group hover:-translate-y-1 transition-transform duration-200">
       <div className="flex items-center gap-3 mb-3">
@@ -174,7 +175,7 @@ function ServiceItem({ icon, secondaryIcon, title, description }) {
   )
 }
 
-function StatCard({ icon, value, label }) {
+function StatCard({ icon, value, label }: {icon: React.ReactNode, value: string, label: string}) {
   return (
     <div className="border border-gray-200 p-6 rounded-xl flex flex-col items-center text-center group hover:bg-emerald-50 transition-colors duration-300">
       <div className="w-14 h-14 rounded-full bg-emerald-50 flex items-center justify-center mb-4 text-emerald-600">
