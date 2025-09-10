@@ -15,7 +15,7 @@ export type UserProfile = {
 };
 
 export interface AuthContextType {
-  user: UserProfile | null;
+  profile: UserProfile | null;
   loading: boolean;
 }
 

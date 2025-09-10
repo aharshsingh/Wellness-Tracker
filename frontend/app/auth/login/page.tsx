@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { getBaseURL } from '@/lib/utils';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import {useRouter} from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 const AnimatedSignIn: React.FC = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
@@ -36,6 +36,8 @@ const AnimatedSignIn: React.FC = () => {
         password,
       });
       if (response.status === 200) {
+        const res = response.data;
+        localStorage.setItem("accessToken", res.result.accessToken);
         router.push("/app/dashboard");
       }
     } catch (error: any) {
@@ -43,7 +45,7 @@ const AnimatedSignIn: React.FC = () => {
         if (error.response.status === 404) {
           toast.error("User not found");
         }
-        if(error.response.status === 401){
+        if (error.response.status === 401) {
           toast.error("Entered wrong password");
         }
       } else {
