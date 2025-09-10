@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { db } from "../config/db";
-import { users } from "../db/schema/users";
+import { users } from "../db/schema";
 type User = typeof users.$inferInsert;
 
 const authService = {

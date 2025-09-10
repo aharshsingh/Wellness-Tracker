@@ -32,6 +32,7 @@ const authController = {
         email: email,
         password: hashedPassword,
       });
+      console.log("user registered successfully", newUser);
       sendResponse(res, "User Signup successfully", newUser, "CREATED");
     } catch (error) {
       return next(error);

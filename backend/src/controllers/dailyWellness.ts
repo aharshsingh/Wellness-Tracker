@@ -67,7 +67,7 @@ const dailyWellnessController = {
                     parseInt(year)
                 );
             }
-            sendResponse(res, wellnessReport, "SUCCESS");
+            sendResponse(res,"wellnessReport", wellnessReport, "SUCCESS");
         } catch (error) {
             console.log(error);
             return next(error);

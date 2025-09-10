@@ -6,6 +6,8 @@ export const profiles = pgTable("profiles", {
     userId: uuid("user_id")
         .notNull()
         .references(() => users.id, { onDelete: "cascade" }),
+    email: varchar("email", { length: 255 }).notNull().unique(),
+    isEmailVerified: boolean("is_email_verified").default(false),
     age: integer("age").notNull(),
     gender: varchar("gender", { length: 50 }).notNull(),
     location: varchar("location", { length: 100 }).notNull(),
