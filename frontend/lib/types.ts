@@ -56,3 +56,9 @@ export type WellnessDay = {
 };
 
 export type NumericWellnessKeys = "steps" | "sleep" | "stress" | "energy" | "weight";
+
+export interface SignupResponse {
+  id: string;
+  username: string;
+  email: string;
+}

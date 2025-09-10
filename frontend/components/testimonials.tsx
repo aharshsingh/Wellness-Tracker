@@ -23,10 +23,10 @@ export default function Testimonials() {
                         <CardHeader>
                             <Image
                                 className="h-6 w-fit dark:invert"
-                                src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Example.jpg"
+                                src="/ChatGPT Image Sep 4, 2025, 12_27_49 PM.png"
                                 alt="Wellness Logo"
-                                height="24"
-                                width="auto"
+                                height={100}
+                                width={100}
                             />
                         </CardHeader>
                         <CardContent>

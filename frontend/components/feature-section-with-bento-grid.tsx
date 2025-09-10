@@ -108,9 +108,11 @@ export const SkeletonOne = () => {
   return (
     <div className="relative flex py-8 px-2 gap-10 h-full">
       <Image
-        src="https://images.unsplash.com/photo-1554288248-efa343376084?auto=format&fit=crop&w=800&q=80"
+        src="/ChatGPT Image Sep 4, 2025, 12_27_49 PM.png"
         alt="Track Daily Health"
         className="w-full h-60 object-cover rounded-md shadow-md"
+        width={100}
+        height={100}
       />
     </div>
   );
@@ -120,9 +122,11 @@ export const SkeletonTwo = () => {
   return (
     <div className="relative flex flex-col items-center justify-center p-4 gap-4 h-full">
       <Image
-        src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80"
+        src="/ChatGPT Image Sep 4, 2025, 12_27_49 PM.png"
         alt="AI Insights"
         className="w-full h-60 object-cover rounded-md shadow-md"
+        width={100}
+        height={100}
       />
     </div>
   );
@@ -132,9 +136,11 @@ export const SkeletonThree = () => {
   return (
     <div className="w-full mx-auto group h-full flex items-center justify-center relative rounded-md">
       <Image
-        src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80"
+        src="/ChatGPT Image Sep 4, 2025, 12_27_49 PM.png"
         alt="Stay Motivated"
         className="w-full h-60 object-cover rounded-md shadow-md"
+        width={100}
+        height={100}
       />
     </div>
   );
@@ -144,9 +150,11 @@ export const SkeletonFour = () => {
   return (
     <div className="w-full mx-auto group h-full flex items-center justify-center relative rounded-md">
       <Image
-        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+        src="/ChatGPT Image Sep 4, 2025, 12_27_49 PM.png"
         alt="Connect Globally"
         className="w-full h-60 object-cover rounded-md shadow-md"
+        width={100}
+        height={100}
       />
     </div>
   );

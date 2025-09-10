@@ -90,10 +90,12 @@ export const Footer = ({
             <div className="flex items-center gap-2 lg:justify-start">
               <a href={logo.url}>
                 <Image
-                  src={logo.src}
+                  src="/ChatGPT Image Sep 4, 2025, 12_27_49 PM.png"
                   alt={logo.alt}
                   title={logo.title}
                   className="h-8"
+                  height={100}
+                  width={100}
                 />
               </a>
               <h2 className="text-xl font-semibold">{logo.title}</h2>
